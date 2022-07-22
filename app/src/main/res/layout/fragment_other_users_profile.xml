@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.home.HomeFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blue_baby_200">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/margin_m"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/cancel_image_view"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_m"
+                android:contentDescription="@string/content"
+                android:padding="5dp"
+                android:src="@drawable/ic_cancel_circle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/profile_image_view"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="55dp"
+                android:padding="@dimen/margin_m"
+                android:layout_marginEnd="@dimen/margin_xl"
+                android:background="@drawable/button_blue"
+                android:src="@drawable/ic_profile_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tv_user_profile_name_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="@dimen/margin_xl"
+                android:singleLine="true"
+                android:text="@string/hasib_rajin"
+                android:textColor="@color/blue_900"
+                android:textSize="27sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cancel_image_view" />
+
+            <TextView
+                android:id="@+id/tv_user_follower_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:singleLine="true"
+                android:text="500 follower"
+                android:textColor="@color/white_700"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_user_profile_name_ID" />
+
+            <TextView
+                android:id="@+id/tv_user_follow"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_l"
+                android:background="@drawable/textview_background"
+                android:gravity="center"
+                android:paddingStart="@dimen/margin_d"
+                android:paddingEnd="@dimen/margin_z"
+                android:text="@string/follow"
+                android:textAlignment="gravity"
+                android:textColor="@color/blue_100_20"
+                android:textSize="@dimen/margin_l"
+                app:drawableLeftCompat="@drawable/ic_user_follow"
+                app:layout_constraintEnd_toStartOf="@+id/tv_user_fav"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_user_follower_count" />
+
+
+            <TextView
+                android:id="@+id/tv_user_fav"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/margin_d"
+                android:background="@drawable/textview_background"
+                android:gravity="center"
+                android:paddingStart="@dimen/margin_d"
+                android:paddingEnd="@dimen/margin_z"
+                android:text="@string/favorite"
+                android:textAlignment="gravity"
+                android:textColor="@color/blue_100_20"
+                android:textSize="@dimen/margin_l"
+                app:drawableLeftCompat="@drawable/ic_user_favorite"
+                app:layout_constraintEnd_toStartOf="@+id/tv_user_block"
+                app:layout_constraintHorizontal_weight="1.1"
+                app:layout_constraintStart_toEndOf="@id/tv_user_follow"
+                app:layout_constraintTop_toTopOf="@+id/tv_user_follow" />
+
+            <TextView
+                android:id="@+id/tv_user_block"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/margin_d"
+                android:layout_marginEnd="@dimen/margin_m"
+                android:background="@drawable/textview_background"
+                android:gravity="center"
+                android:paddingStart="@dimen/margin_d"
+                android:paddingEnd="@dimen/margin_z"
+                android:text="@string/block"
+                android:textAlignment="gravity"
+                android:textColor="@color/blue_100_20"
+                android:textSize="@dimen/margin_l"
+                app:drawableLeftCompat="@drawable/ic_user_block"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@id/tv_user_fav"
+                app:layout_constraintTop_toTopOf="@+id/tv_user_fav" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_s"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/margin_m"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/container_profile">
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/layout_tab"
+                app:tabTextAppearance="@style/MineCustomTabText"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                app:tabTextColor="@color/blue_900"
+                app:tabRippleColor="@color/blue_baby_200"
+                app:tabIndicatorColor="@color/blue_900"
+                app:tabMaxWidth="0dp"
+                app:tabGravity="fill"
+                app:tabMode="fixed"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewpager_profile"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_tab" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

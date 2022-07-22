@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--    <data>-->
+
+    <!--        <variable-->
+    <!--            name="viewModel"-->
+    <!--            type="com.example.qissa.viewModels.DataShareViewModel" />-->
+    <!--    </data>-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_account_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_s"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/margin_m"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="-16dp">
+
+            <TextView
+                android:id="@+id/about_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_m"
+                android:text="@string/about"
+                android:textColor="@color/blue_100"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_m"
+                android:drawablePadding="15dp"
+                android:singleLine="true"
+                android:text="@string/na"
+                android:textColor="@color/blue_900"
+                android:textSize="17sp"
+                app:drawableLeftCompat="@drawable/ic_user_name_black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/about_textview" />
+
+            <TextView
+                android:id="@+id/tv_user_email"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="@dimen/margin_m"
+                android:layout_marginTop="5dp"
+                android:drawablePadding="14dp"
+                android:text="@string/na"
+                android:textColor="@color/blue_900"
+                android:textSize="17sp"
+                app:drawableLeftCompat="@drawable/ic_user_email_black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_user_name" />
+
+            <TextView
+                android:id="@+id/tv_user_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="@dimen/margin_m"
+                android:layout_marginTop="5dp"
+                android:drawablePadding="@dimen/margin_m"
+                android:text="@string/na"
+                android:textColor="@color/blue_900"
+                android:textSize="17sp"
+                app:drawableLeftCompat="@drawable/ic_mobile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_user_email" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/blue_baby_100"
+            app:layout_constraintTop_toBottomOf="@+id/container_account_info" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_personal_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/margin_m"
+            app:layout_constraintTop_toBottomOf="@+id/container_account_info">
+
+            <TextView
+                android:id="@+id/personal_info_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_m"
+                android:text="@string/personal_info"
+                android:textColor="@color/blue_100"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tv_user_birth"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="@dimen/margin_m"
+                android:drawablePadding="@dimen/margin_m"
+                android:text="@string/na"
+                android:textColor="@color/blue_900"
+                android:textSize="17sp"
+                app:drawableLeftCompat="@drawable/ic_birth"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/personal_info_textview" />
+
+            <TextView
+                android:id="@+id/tv_user_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="@dimen/margin_m"
+                android:layout_marginTop="5dp"
+                android:drawablePadding="@dimen/margin_m"
+                android:singleLine="true"
+                android:text="@string/na"
+                android:textColor="@color/blue_900"
+                android:textSize="17sp"
+                app:drawableLeftCompat="@drawable/ic_gender"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_user_birth" />
+
+            <TextView
+                android:id="@+id/tv_user_education"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="@dimen/margin_m"
+                android:layout_marginTop="5dp"
+                android:drawablePadding="@dimen/margin_m"
+                android:singleLine="true"
+                android:text="@string/na"
+                android:textColor="@color/blue_900"
+                android:textSize="17sp"
+                app:drawableLeftCompat="@drawable/ic_job"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_user_gender" />
+
+            <TextView
+                android:id="@+id/tv_user_address"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="5dp"
+                android:drawablePadding="@dimen/margin_d"
+                android:text="@string/na"
+                android:textColor="@color/blue_900"
+                android:textSize="17sp"
+                app:drawableLeftCompat="@drawable/ic_address"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_user_education" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

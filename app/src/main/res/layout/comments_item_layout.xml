@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <data>
+
+        <variable
+            name="comment"
+            type="com.example.qissa.models.DataXXX" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/container_top_Nav_data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/profile_image_view"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="@dimen/margin_m"
+            android:layout_marginStart="@dimen/margin_m"
+            android:src="@drawable/ic_circle_icons_profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/content" />
+
+
+        <TextView
+            android:id="@+id/tv_user_profile_name_ID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:singleLine="true"
+            android:text="@{comment.user.name}"
+            android:textColor="@color/black_100"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/profile_image_view"
+            app:layout_constraintTop_toTopOf="@id/profile_image_view"
+            app:layout_constraintBottom_toBottomOf="@+id/profile_image_view" />
+
+        <TextView
+            android:id="@+id/tv_post_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_m"
+            android:text="@string/post_time"
+            android:textAllCaps="false"
+            android:textColor="@color/white_700"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_user_profile_name_ID"
+            app:layout_constraintStart_toEndOf="@+id/tv_user_profile_name_ID"
+            app:layout_constraintTop_toTopOf="@+id/tv_user_profile_name_ID" />
+
+
+        <ImageView
+            android:id="@+id/more"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="@dimen/margin_d"
+            android:src="@drawable/ic_dots_3"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_post_time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_post_time" />
+
+        <TextView
+            android:id="@+id/tv_comments_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_m"
+            android:layout_marginTop="@dimen/margin_xl"
+            android:layout_marginEnd="@dimen/margin_m"
+            android:minHeight="80dp"
+            android:textSize="17sp"
+            android:text="@{comment.comment_text}"
+            android:textColor="@color/black_100"
+            app:layout_constraintTop_toBottomOf="@id/tv_post_time" />
+
+        <TextView
+            android:id="@+id/textView_clap"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:background="?attr/selectableItemBackground"
+            android:backgroundTint="@color/blue_100_20"
+            android:drawablePadding="@dimen/margin_m"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/margin_m"
+            android:paddingEnd="@dimen/margin_m"
+            android:text="@string/_0"
+            android:textAllCaps="false"
+            android:textColor="@color/blue_100"
+            android:textSize="18sp"
+            app:drawableStartCompat="@drawable/ic_clap_transparent"
+            app:layout_constraintEnd_toStartOf="@+id/textView_reply"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_comments_details" />
+
+
+        <TextView
+            android:id="@+id/textView_reply"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:background="?attr/selectableItemBackground"
+            android:backgroundTint="@color/blue_100_20"
+            android:drawablePadding="@dimen/margin_m"
+            android:gravity="center_vertical|end"
+            android:paddingStart="@dimen/margin_m"
+            android:paddingEnd="@dimen/margin_m"
+            android:text="@string/reply"
+            android:textAllCaps="false"
+            android:textColor="@color/blue_100"
+            android:textSize="18sp"
+            android:textAlignment="gravity"
+            app:drawableEndCompat="@drawable/ic_reply"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/textView_clap"
+            app:layout_constraintTop_toBottomOf="@id/tv_comments_details" />
+
+        <View
+            android:id="@+id/view_devider_top_nav"
+            app:layout_constraintTop_toBottomOf="@+id/textView_reply"
+            android:background="@color/colorSky_200"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="@dimen/margin_m"
+            android:layout_marginEnd="@dimen/margin_m"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="1dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

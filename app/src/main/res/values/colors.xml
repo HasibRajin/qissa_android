@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="black_100">#0E0D23</color>
+    <color name="black_60pct">#990E0D23</color>
+    <color name="white_100">#F4F9F8</color>
+    <color name="white_00">#FFFFFF</color>
+    <color name="white_20percent">#1Afafafa</color>
+
+    <color name="white_200">#fafafa</color>
+    <color name="white_600">#F4F4F4</color>
+    <color name="white_300">#F5F5F5</color>
+    <color name="white_700">#7D7D7D</color>
+    <color name="white_800">#C4C4C4</color>
+    <color name="white_900">#B0B0B0</color>
+    <color name="colorSky_200">#EFEFEF</color>
+
+    <color name="blue_900">#2C3E50</color>
+    <color name="blue_900_60">#F22C3E50</color>
+    <color name="blue_100">#4F5D73</color>
+    <color name="blue_100_60">#CC4F5D73</color>
+    <color name="blue_100_40">#994F5D73</color>
+    <color name="blue_100_20">#664F5D73</color>
+    <color name="blue_100_10">#334F5D73</color>
+    <color name="blue_baby_100">#66DBF5F0</color>
+    <color name="blue_baby_200">#40c0cedb</color>
+    <color name="blue_baby_300">#1Ac0cedb</color>
+
+
+    <color name="orange50">#EBCD94</color>
+    <color name="orangeTransparent50">#99EBCD94</color>
+    <color name="orange100">#F9BA4F</color>
+    <color name="orange200">#6DFF9800</color>
+    <color name="orange_900">#FFB944</color>
+
+    <color name="yellow_100">#FCDB68</color>
+    <color name="yellow_200">#FFFFF0</color>
+
+    <color name="green_100">#008000</color>
+
+
+    <color name="colorGray_100">#F5F5F5</color>
+    <color name="colorGray_200">#ECECED</color>
+    <color name="colorGray_300">#C4C4C4</color>
+
+    <color name="ripple_100">#A89DFF</color>
+    <color name="status_bar">#FFFFFF</color>
+
+    <!--Color opacity-->
+    <!--    100% — FF-->
+    <!--    95% — F2-->
+    <!--    90% — E6-->
+    <!--    85% — D9-->
+    <!--    80% — CC-->
+    <!--    75% — BF-->
+    <!--    70% — B3-->
+    <!--    65% — A6-->
+    <!--    60% — 99-->
+    <!--    55% — 8C-->
+    <!--    50% — 80-->
+    <!--    45% — 73-->
+    <!--    40% — 66-->
+    <!--    35% — 59-->
+    <!--    30% — 4D-->
+    <!--    25% — 40-->
+    <!--    20% — 33-->
+    <!--    15% — 26-->
+    <!--    10% — 1A-->
+    <!--    5% — 0D-->
+    <!--    0% — 00-->
+
+</resources>

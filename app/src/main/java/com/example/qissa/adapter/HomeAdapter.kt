@@ -56,7 +56,10 @@ class HomeAdapter(
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val item = getItem(position)
-        holder.bind(item)
+        if (item != null) {
+            if (!item.flag)
+                holder.bind(item)
+        }
     }
 
     class ListViewHolder private constructor(

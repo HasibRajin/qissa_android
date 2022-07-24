@@ -5,9 +5,9 @@
     android:icon="@drawable/ic_home"
     android:title="@string/home"/>
     <item
-        android:id="@+id/write"
-        android:icon="@drawable/ic_write"
-        android:title="@string/write"/>
+        android:id="@+id/question"
+        android:icon="@drawable/ic_qa"
+        android:title="@string/qa"/>
 
     <item
         android:id="@+id/chat"

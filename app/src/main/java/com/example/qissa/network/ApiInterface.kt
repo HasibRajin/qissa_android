@@ -179,4 +179,16 @@ interface ApiInterface {
         @Query("request_data") requestData: String,
         @Query("liker_id") likerId: Int?
     ): Response<SearchResponse>
+
+    @GET("api/question")
+    suspend fun getQuestion(
+        @Query("current_page") currentPage: Int,
+        @Query("liker_id") likerId: Int?
+    ): Response<QuestionResponse>
+
+    @GET("api/answer/{id}")
+    suspend fun getAnswer(
+        @Path("id") id: Int,
+        @Query("liker_id") likerId: Int?
+    ): Response<AnswerResponse>
 }

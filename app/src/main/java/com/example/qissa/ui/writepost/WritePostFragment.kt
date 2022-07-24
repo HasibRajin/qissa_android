@@ -118,6 +118,9 @@ class WritePostFragment :
             binding.addImage.visible()
         }
         binding.writePostEdittext.addTextChangedListener(textWatchers)
+        binding.closeImageView.setOnClickListener {
+            activity?.onBackPressed()
+        }
     }
 
     private var textWatchers = object : TextWatcher {

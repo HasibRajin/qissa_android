@@ -102,22 +102,22 @@
 
 
                     <TextView
-                        android:id="@+id/tv_nav_topics"
+                        android:id="@+id/tv_nav_write"
                         android:layout_width="0dp"
                         android:layout_height="55dp"
                         android:background="?attr/selectableItemBackground"
                         android:backgroundTint="@color/blue_100_20"
-                        android:drawablePadding="@dimen/margin_m"
+                        android:drawablePadding="13dp"
                         android:gravity="center_vertical"
                         android:paddingStart="@dimen/margin_m"
                         android:paddingEnd="@dimen/margin_s"
-                        android:text="@string/topics"
+                        android:text="@string/create_story"
                         android:textAllCaps="false"
                         android:textColor="@color/blue_900"
                         android:textSize="15sp"
                         android:textStyle="bold"
                         app:drawableEndCompat="@drawable/ic_keyboard_arrow_right_black"
-                        app:drawableStartCompat="@drawable/ic_topic_icom"
+                        app:drawableStartCompat="@drawable/ic_create"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -130,25 +130,24 @@
                         android:background="@color/blue_baby_200"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_nav_topics" />
+                        app:layout_constraintTop_toBottomOf="@+id/tv_nav_write" />
 
                     <TextView
-                        android:id="@+id/tv_nav_notification"
+                        android:id="@+id/tv_nav_topic"
                         android:layout_width="0dp"
                         android:layout_height="55dp"
                         android:background="?attr/selectableItemBackground"
                         android:backgroundTint="@color/blue_100_20"
-
                         android:drawablePadding="@dimen/margin_m"
                         android:gravity="center_vertical"
                         android:paddingStart="@dimen/margin_m"
                         android:paddingEnd="@dimen/margin_s"
-                        android:text="@string/notification"
+                        android:text="@string/topics"
                         android:textAllCaps="false"
                         android:textColor="@color/black_100"
                         android:textSize="15sp"
                         app:drawableEndCompat="@drawable/ic_keyboard_arrow_right_black"
-                        app:drawableStartCompat="@drawable/ic_notification"
+                        app:drawableStartCompat="@drawable/ic_topic_icom"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/view_devider_top_nav" />
@@ -241,9 +240,9 @@
                         android:background="?attr/selectableItemBackground"
                         android:backgroundTint="@color/blue_100_20"
 
-                        android:drawablePadding="@dimen/margin_m"
+                        android:drawablePadding="13dp"
                         android:gravity="center_vertical"
-                        android:paddingStart="@dimen/margin_m"
+                        android:paddingStart="14dp"
                         android:paddingEnd="@dimen/margin_z"
                         android:text="@string/saved"
                         android:textAllCaps="false"

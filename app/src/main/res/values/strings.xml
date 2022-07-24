@@ -112,7 +112,7 @@
     <string name="gender">Gender</string>
     <string name="female">female</string>
     <string name="others">others</string>
-    <string name="create_story">Add Story</string>
+    <string name="create_story">Write Story</string>
     <string name="add_title">Add title to your story</string>
     <string name="add_image">Add image</string>
     <string name="title_activity_maps">MapsActivity</string>
@@ -127,6 +127,8 @@
     <string name="report">Report stories</string>
     <string name="search">Search</string>
     <string name="search_here">Search here...</string>
+    <string name="qa">Q/A</string>
+    <string name="search_qs">Search Question</string>
 
 
 </resources>

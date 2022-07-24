@@ -14,7 +14,7 @@
         android:id="@+id/container_profile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="300dp"
+        android:minHeight="250dp"
         android:layout_marginBottom="@dimen/margin_s"
         android:background="@color/white">
 
@@ -92,7 +92,7 @@
             android:layout_marginStart="@dimen/margin_m"
             android:layout_marginTop="@dimen/margin_xl"
             android:layout_marginEnd="@dimen/margin_m"
-            android:minHeight="200dp"
+            android:minHeight="150dp"
             android:textSize="17sp"
             android:text="@{post.details}"
             android:textColor="@color/black_100"

@@ -48,8 +48,10 @@
 
                 <ImageView
                     android:id="@+id/add_profile_image_view"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/button_blue"
+                    android:padding="1dp"
                     android:src="@drawable/ic_add"
                     android:layout_marginBottom="2.5dp"
                     android:layout_marginEnd="2dp"

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="question"
+            type="com.example.qissa.models.DataXXXXXXXXXXXXXXX" />
+
+        <variable
+            name="viewModel"
+            type="com.example.qissa.viewModels.AnswerViewModel" />
+
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/container_top_Nav_data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/profile_image_view"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="@dimen/margin_l"
+            android:layout_marginStart="@dimen/margin_m"
+            android:padding="3dp"
+            android:src="@drawable/ic_profile_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/content" />
+
+
+        <TextView
+            android:id="@+id/tv_user_profile_name_ID"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="@dimen/margin_m"
+            android:singleLine="true"
+            android:text="@{question.user.name}"
+            android:textColor="@color/blue_100"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/more"
+            app:layout_constraintStart_toEndOf="@id/profile_image_view"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_answer_count"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/post_time"
+            android:textAllCaps="false"
+            android:textColor="@color/white_700"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/more"
+            app:layout_constraintStart_toStartOf="@+id/tv_user_profile_name_ID"
+            app:layout_constraintTop_toBottomOf="@+id/tv_user_profile_name_ID" />
+
+
+        <ImageView
+            android:id="@+id/more"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="@dimen/margin_d"
+            android:padding="4dp"
+            android:src="@drawable/ic_arrow_drop_down"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_answer_count"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_user_profile_name_ID" />
+
+        <TextView
+            android:id="@+id/tv_question_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_100"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/margin_l"
+            android:layout_marginEnd="@dimen/margin_m"
+            android:layout_marginTop="@dimen/margin_l"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_answer_count" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleView_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="1dp"
+            android:paddingEnd="1dp"
+            android:paddingTop="1dp"
+            android:paddingBottom="0dp"
+            android:visibility="gone"
+            android:background="@drawable/nested_recycleview_bg"
+            app:items="@{viewModel.items.data}"
+            android:layout_marginTop="@dimen/margin_m"
+            android:layout_marginStart="@dimen/margin_m"
+            android:layout_marginEnd="@dimen/margin_m"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/tv_question_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:listitem="@layout/answer_item_layout" />
+
+        <View
+            android:id="@+id/view_devider_top_nav"
+            app:layout_constraintTop_toBottomOf="@+id/recycleView_answer"
+            android:background="@color/colorSky_200"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/margin_l"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="1dp" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/loading_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="@color/white"
+            tools:viewBindingIgnore="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:orientation="vertical"
+                android:paddingStart="16dp"
+                android:clipToPadding="false"
+                android:paddingEnd="16dp">
+
+                <include layout="@layout/demo_post_placeholder_layout" />
+
+                <include layout="@layout/demo_post_placeholder_layout" />
+
+                <include layout="@layout/demo_post_placeholder_layout" />
+
+                <include layout="@layout/demo_post_placeholder_layout" />
+
+                <include layout="@layout/demo_post_placeholder_layout" />
+
+                <include layout="@layout/demo_post_placeholder_layout" />
+
+                <include layout="@layout/demo_post_placeholder_layout" />
+
+                <include layout="@layout/demo_post_placeholder_layout" />
+
+                <include layout="@layout/demo_post_placeholder_layout" />
+
+                <include layout="@layout/demo_post_placeholder_layout" />
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

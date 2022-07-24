@@ -224,8 +224,6 @@ class HomeFragment :
                     if (createPostResponse.success) {
                         Toast.makeText(context, createPostResponse.message, Toast.LENGTH_LONG)
                             .show()
-                        adapter.notifyItemRemoved(adaptePosition)
-                        adapter.notifyDataSetChanged()
                     } else {
                         Toast.makeText(
                             context,
@@ -279,7 +277,7 @@ class HomeFragment :
         sharedPreference.getToken()?.let {
             deletePostViewModel.deletePost(it, item.id)
         }
-
+        item.flag = true
 //        var list = adapter.snapshot().toMutableList()
 //        Timber.tag(ContentValues.TAG)
 //            .d("jwoifjwofiwoeifey: getPostsPaged  REMOVE BEFORE" + list.size.toString())

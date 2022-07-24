@@ -86,9 +86,9 @@ class DashboardActivity :
 
         navLayoutBinding.containerProfile.setOnClickListener(this::onClick)
 
-        navLayoutBinding.tvNavTopics.setOnClickListener(this::onClick)
+        navLayoutBinding.tvNavTopic.setOnClickListener(this::onClick)
 
-        navLayoutBinding.tvNavNotification.setOnClickListener(this::onClick)
+        navLayoutBinding.tvNavWrite.setOnClickListener(this::onClick)
 
         navLayoutBinding.tvNavChangePassword.setOnClickListener(this::onClick)
 
@@ -134,8 +134,8 @@ class DashboardActivity :
 
                     return@setOnItemSelectedListener true
                 }
-                R.id.write -> {
-                    gotoFragment(R.id.writePostFragment)
+                R.id.question -> {
+                    gotoFragment(R.id.questionFragment)
 
                     return@setOnItemSelectedListener true
                 }
@@ -152,8 +152,8 @@ class DashboardActivity :
                     onDestinationChange(R.id.home)
                     return@addOnDestinationChangedListener
                 }
-                R.id.writePostFragment -> {
-                    onDestinationChange(R.id.write)
+                R.id.questionFragment -> {
+                    onDestinationChange(R.id.question)
                     return@addOnDestinationChangedListener
                 }
                 R.id.chatFragment -> {
@@ -192,14 +192,23 @@ class DashboardActivity :
         when (v) {
 
             binding.appBar.imgMenu -> openCloseNavigationDrawer(v)
-            binding.appBar.imgSearch -> gotoFragment(R.id.searchFragment)
+            binding.appBar.imgSearch -> {
+                when (binding.bottomNavigation.selectedItemId) {
+                    R.id.home -> gotoFragment(R.id.searchFragment)
+                    R.id.question -> gotoFragment(R.id.searchQuestionFragment)
+                    R.id.chat -> gotoFragment(R.id.searchQuestionFragment)
+                    R.id.book -> gotoFragment(R.id.searchQuestionFragment)
+                    R.id.notification -> gotoFragment(R.id.searchQuestionFragment)
+                    else -> gotoFragment(R.id.searchFragment)
+                }
+            }
             navLayoutBinding.topBar.imgBack -> openCloseNavigationDrawer(v)
 
             navLayoutBinding.containerProfile -> gotoFragment(R.id.profileFragment)
 
-            navLayoutBinding.tvNavTopics -> gotoOtherScreen()
+            navLayoutBinding.tvNavWrite -> gotoFragment(R.id.writePostFragment)
 
-            navLayoutBinding.tvNavNotification -> gotoOtherScreen()
+            navLayoutBinding.tvNavTopic -> gotoOtherScreen()
 
             navLayoutBinding.tvNavChangePassword -> gotoOtherScreen()
 

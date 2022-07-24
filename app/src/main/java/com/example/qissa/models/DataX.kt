@@ -11,5 +11,6 @@ data class DataX(
     val topic_id: Int,
     val updated_at: String,
     val user: UserX,
-    val user_id: Int
+    val user_id: Int,
+    var flag: Boolean = false
 )

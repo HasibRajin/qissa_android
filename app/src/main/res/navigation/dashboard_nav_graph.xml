@@ -51,18 +51,21 @@
             app:destination="@id/myStoriesFragment"
             app:enterAnim="@anim/from_right"
             app:exitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_homeFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
     </fragment>
     <fragment
         android:id="@+id/writePostFragment"
         android:name="com.example.qissa.ui.writepost.WritePostFragment"
         android:label="writePostFragment"
         tools:layout="@layout/fragment_write_post">
-
+        ]
         <action
             android:id="@+id/action_writePostFragment_to_homeFragment"
             app:destination="@id/homeFragment"
-            app:enterAnim="@anim/from_left"
-            app:exitAnim="@anim/to_right" />
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
     </fragment>
     <fragment
         android:id="@+id/booksFragment"
@@ -175,5 +178,19 @@
             android:id="@+id/action_searchFragment_to_commentsFragment"
             app:destination="@id/commentsFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="com.example.qissa.ui.question.QuestionFragment"
+        android:label="fragment_question"
+        tools:layout="@layout/fragment_question"
+        app:enterAnim="@anim/from_left"
+        app:exitAnim="@anim/to_right" />
+    <fragment
+        android:id="@+id/searchQuestionFragment"
+        android:name="com.example.qissa.ui.search.SearchQuestionFragment"
+        android:label="fragment_search_question"
+        tools:layout="@layout/fragment_search_question"
+        app:enterAnim="@anim/from_left"
+        app:exitAnim="@anim/to_right" />
 
 </navigation>
